@@ -5,6 +5,7 @@
 #include <QSqlDatabase>
 
 #include <QTableView>
+#include <QTableWidget>
 
 
 class DBManager
@@ -19,6 +20,8 @@ public:
     void connectMySQL();
     void testQuery(const QString &table_name);
     void generateDynamicTableView(const QString &sql_query_text, QTableView *tv);
+
+
 
 
 private:

@@ -32,18 +32,16 @@ void DBManager::generateDynamicTableView(const QString &sql_query_text, QTableVi
 
     QSqlQueryModel *model = new QSqlQueryModel();
     model->setQuery(sql_query_text);
-
     //sorting enabled
     QSortFilterProxyModel *proxy_model = new QSortFilterProxyModel();
     proxy_model->setSourceModel(model);
 
     tv->setModel(proxy_model);
     tv->setSortingEnabled(true);
-    tv->horizontalHeader()->stretchLastSection();
-    tv->setToolTip("tooltip");
-
     tv->show();
 }
+
+
 
 
 void DBManager::connectMySQL()

@@ -2,39 +2,29 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1144</width>
-    <height>663</height>
+    <width>1136</width>
+    <height>640</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background: rgb(238, 238, 236)</string>
+   <string notr="true">background: rgb(184, 217, 221)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView1">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>50</y>
-      <width>1101</width>
-      <height>201</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>930</x>
-      <y>260</y>
+      <x>910</x>
+      <y>60</y>
       <width>191</width>
       <height>51</height>
      </rect>
@@ -46,7 +36,7 @@
      <string notr="true">
 QPushButton
 {
-  background-color: #4CAF50; /* Green */
+background-color: rgb(114, 159, 207);
 border: none;
 color: white;
 font-size: 16pt;
@@ -54,24 +44,110 @@ font-size: 16pt;
 
 QPushButton:hover:!pressed
 {
-  border: 1px solid red;
+  border: 1px solid rgb(52, 101, 164);
 }</string>
     </property>
     <property name="text">
-     <string>Tümünü Getir</string>
+     <string>İlan Yönetimi</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>130</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(114, 159, 207);
+border: none;
+color: white;
+font-size: 16pt;
+}
+
+QPushButton:hover:!pressed
+{
+  border: 1px solid rgb(52, 101, 164);
+}</string>
+    </property>
+    <property name="text">
+     <string>Firma Yönetimi</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>200</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+background-color: rgb(114, 159, 207);
+border: none;
+color: white;
+font-size: 16pt;
+}
+
+QPushButton:hover:!pressed
+{
+  border: 1px solid rgb(52, 101, 164);
+}</string>
+    </property>
+    <property name="text">
+     <string>Etkinlik Yönetimi</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>130</y>
+      <width>851</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgb(238, 238, 236)</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>20</y>
-      <width>67</width>
+      <y>100</y>
+      <width>121</width>
       <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>Sonuçlar</string>
+     <string>Geri Bildirimler</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>480</y>
+      <width>141</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Seçiliyi Kaldır</string>
     </property>
    </widget>
   </widget>
@@ -80,7 +156,7 @@ QPushButton:hover:!pressed
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1144</width>
+     <width>1136</width>
      <height>29</height>
     </rect>
    </property>
