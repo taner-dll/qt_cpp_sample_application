@@ -1,12 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include "dbmanager.h"
 
 #include <QDebug>
-
-#include <QSqlQueryModel>
-#include <QSortFilterProxyModel>
-#include <QSqlQuery>
 
 
 
@@ -21,23 +18,25 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+
 }
 
 
-void MainWindow::on_pushButton_clicked()
+
+void MainWindow::on_pushButton_2_clicked()
 {
 
     DBManager *dbm = new DBManager();
+
     dbm->openConnection("edro_db", "QMYSQL");
     dbm->connectMySQL();
 
-
-    dbm->testQuery("user");
-
+    QString query = "select * from user where id between 10 and 13";
+    dbm->generateDynamicTableView(query, ui->tableView1);
 
 
     dbm->closeConnection();
-    //qDebug() << dbm->isOpen();
+
 
 
 }

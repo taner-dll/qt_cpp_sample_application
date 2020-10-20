@@ -5,8 +5,13 @@
 
 #include "dbmanager.h"
 
-#include <QtSql>
+#include <QDebug>
 #include <QSqlQuery>
+#include <QSqlQueryModel>
+#include <QSortFilterProxyModel>
+
+#include <QTableView>
+#include <QtWidgets>
 
 
 
@@ -17,8 +22,27 @@ DBManager::DBManager()
 }
 
 void DBManager::openConnection(const QString &path, const QString &dbType){
+
     this->db = QSqlDatabase::addDatabase(dbType); //QMYSQL, QSQLITE...
     this->db.setDatabaseName(path); //db name or path
+}
+
+
+void DBManager::generateDynamicTableView(const QString &sql_query_text, QTableView *tv){
+
+    QSqlQueryModel *model = new QSqlQueryModel();
+    model->setQuery(sql_query_text);
+
+    //sorting enabled
+    QSortFilterProxyModel *proxy_model = new QSortFilterProxyModel();
+    proxy_model->setSourceModel(model);
+
+    tv->setModel(proxy_model);
+    tv->setSortingEnabled(true);
+    tv->horizontalHeader()->stretchLastSection();
+    tv->setToolTip("tooltip");
+
+    tv->show();
 }
 
 
@@ -37,6 +61,7 @@ void DBManager::connectMySQL()
 
 
 void DBManager::closeConnection(){
+
     this->db.close();
     qDebug() << "Database: connection has been closed";
 }
@@ -44,6 +69,7 @@ void DBManager::closeConnection(){
 
 
 void DBManager::testQuery(const QString &table_name){
+
     QSqlQuery query;
     query.exec("SELECT id FROM "+table_name);
     while (query.next()) {
@@ -55,6 +81,7 @@ void DBManager::testQuery(const QString &table_name){
 
 
 bool DBManager::isOpen(){
+
     return this->db.isOpen();
 }
 

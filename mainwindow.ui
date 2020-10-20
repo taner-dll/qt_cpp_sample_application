@@ -6,35 +6,72 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1144</width>
+    <height>663</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background: rgb(238, 238, 236)</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="tableView">
+   <widget class="QTableView" name="tableView1">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>70</y>
-      <width>591</width>
-      <height>291</height>
+      <x>20</x>
+      <y>50</y>
+      <width>1101</width>
+      <height>201</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>380</y>
-      <width>104</width>
-      <height>36</height>
+      <x>930</x>
+      <y>260</y>
+      <width>191</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QPushButton
+{
+  background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+font-size: 16pt;
+}
+
+QPushButton:hover:!pressed
+{
+  border: 1px solid red;
+}</string>
+    </property>
+    <property name="text">
+     <string>Tümünü Getir</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>67</width>
+      <height>19</height>
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string>Sonuçlar</string>
     </property>
    </widget>
   </widget>
@@ -43,7 +80,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>1144</width>
      <height>29</height>
     </rect>
    </property>
