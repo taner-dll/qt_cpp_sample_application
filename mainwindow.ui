@@ -20,7 +20,7 @@
    <string notr="true">background: rgb(184, 217, 221)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="adverts_button">
     <property name="geometry">
      <rect>
       <x>910</x>
@@ -51,7 +51,7 @@ QPushButton:hover:!pressed
      <string>İlan Yönetimi</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="business_button">
     <property name="geometry">
      <rect>
       <x>910</x>
@@ -81,7 +81,7 @@ QPushButton:hover:!pressed
      <string>Firma Yönetimi</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="events_button">
     <property name="geometry">
      <rect>
       <x>910</x>
@@ -150,6 +150,45 @@ QPushButton:hover:!pressed
      <string>Seçiliyi Kaldır</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="fetch_feedback_button">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>480</y>
+      <width>211</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Geri Bildirimleri Getir</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>161</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMessageBox Basic</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>171</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>QMessageBox Detailed</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -164,5 +203,25 @@ QPushButton:hover:!pressed
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>business_button</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMaximized()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1005</x>
+     <y>184</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>798</x>
+     <y>107</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>signal1()</signal>
+ </slots>
 </ui>
