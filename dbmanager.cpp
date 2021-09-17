@@ -48,7 +48,7 @@ void DBManager::connectMySQL()
 {
     this->db.setHostName("127.0.0.1");
     this->db.setUserName("root");
-    this->db.setPassword("63845489");
+    this->db.setPassword("12345");
 
     if(!this->db.open())
         qDebug() << "Database: MySQL connection failed!";
